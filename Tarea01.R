@@ -36,24 +36,28 @@ conjunto$Diametro <= 16.9
 
 
 #Visualizacion de datos
-
-hist(H.16$Altura, col="blue", xlab = "H.16$Altura (m)",ylab = "Frecuencia", main = "Histograma de H.16"
+par(mfrow=c(2,2))
+hist(H.16$Altura, col="blue", xlab = "H.16$Altura (m)",ylab = "Frecuencia", main = "Histograma de H.16")
 hist(Vecinos_3$Vecinos, col="Yellow", xlab = "Vecinos_3",ylab = "Frecuencia", main = "Histograma vecinos_3")
 hist(conjunto$Diametro, col = "red", xlab = "Histograma", ylab = "Frecuencia", main = "Histograma de Diametro")     
 hist(DBH_16$Diametro, col = "green", xlab = "Histograma de DBH_16", ylab = "Frecuencia", main = "Histograma de DBH_16")
 
+
+
+# 3 Graficas
 ts.dug.h<-subset(conjunto, conjunto$Especie == "H")
 ts.dug.f<-subset(conjunto, conjunto$Especie == "F")
 ts.dug.hf<-subset(conjunto, conjunto$Especie == "H")
 
 HyF<- rbind(ts.dug.h, ts.dug.f)
 
-
-# 3 Graficas
-
 par(mfrow=c(2,2))
-hist(Tsuga_heterofila$Altura)
-hist(Douglasia_verde$Altura)
-hist(Tsuga_heterofila$Diametro)
-hist(Douglasia_verde$Diametro)
+hist(Tsuga_heterofila$Altura, col = "Green", main = "Altura especie H", xlab = "Altura", ylab = "Frecuencia")
+hist(Douglasia_verde$Altura, col = "green", main = "Altura especie F", xlab = "Altura", ylab = "Frecuencia")
+hist(Tsuga_heterofila$Diametro, col= "blue", main = "Diametro especie H", xlab = "Diametro", ylab = "Frecuencia")
+hist(Douglasia_verde$Diametro, col = "blue", main = "Diametro especie F",  xlab = "Diametro", ylab = "Frecuencia")
 par(mfrow=c(1,1))
+
+#Estadisticas basicas
+mean()
+
