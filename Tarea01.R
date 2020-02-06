@@ -59,5 +59,9 @@ hist(Douglasia_verde$Diametro, col = "blue", main = "Diametro especie F",  xlab 
 par(mfrow=c(1,1))
 
 #Estadisticas basicas
-mean()
-
+mean(conjunto$Altura)
+mean(conjunto$Vecinos)
+mean(conjunto$Diametro)
+mean(H.media$Altura)
+mean(H.16$Altura)
+sd(conjunto$Diametro)
