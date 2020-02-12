@@ -3,7 +3,7 @@ conjunto <- source_data("https://www.dropbox.com/s/hmsf07bbayxv6m3/cuadro1.csv?d
 
 # Altura
 mean(conjunto$Altura)
-subset(conjunto$Altura)
+
 H.media<-subset(conjunto, conjunto$Altura <= 13.94 )
 H.16 <-subset(conjunto, conjunto$Altura < 16.5 )
 
@@ -65,3 +65,8 @@ mean(conjunto$Diametro)
 mean(H.media$Altura)
 mean(H.16$Altura)
 sd(conjunto$Diametro)
+sd(conjunto$Vecinos)
+sd(conjunto$Altura)
+sd(H.media$Altura)
+sd(H.16$Altura)
+
